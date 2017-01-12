@@ -49,31 +49,6 @@
                         docked = false;
                     }
                 };
-
-
-                (function () {
-                    var link = document.getElementById('guide-link'),
-                        menu = document.getElementById('menu');
-
-                    link.onmouseover = function () {
-                        link.className = 'dark-red';
-                    };
-                    link.onmouseout = function (e) {
-                        link.className = link.className.replace('dark-red', '');
-                        hide ();
-                    };
-                    dropdown.onmouseout = function (e) {
-                        var t = e.relatedTarget;
-
-                        if (e.target == link) { return }
-
-                        while (t !== document.body) {
-                            t = t.parentNode;
-                        }
-                        link.className = link.className.replace('dark-red', '');
-                        hide ();
-                    };
-                })();
             };
 
             function scrollTop() {
