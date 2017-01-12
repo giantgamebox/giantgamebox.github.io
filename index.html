@@ -73,31 +73,25 @@
                 </section>
 
                 <section id="example">
-                    <p>Unity游戏可以这样来开发:</p>
-
-<pre><code>
-@base: #f938ab;
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  box-shadow:         @style @c;
-  -webkit-box-shadow: @style @c;
-  -moz-box-shadow:    @style @c;
-}
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box { 
-  color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
-}
-</code></pre>
-
-                    <p>在引入<code>less.js</code>前先要把你的样式文件引入 :</p>
-
-<pre><code>&lt;link rel="stylesheet/less" type="text/css" href="styles.less"&gt;
-&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;
-</code></pre>
-
+                    <p>第一步</p>
+                    <pre><code>
+                        将下载的ServiceCenter.Editor.dll放在Unity项目中的Editor目录
+                    </code></pre>
+                    <p>第二步</p>
+                    <pre><code>
+                        在Unity的GameBox菜单下选择ServiceCenter，在弹出的对话框中点击Create
+                    </code></pre>
+                    <p>第三步</p>
+                    <pre><code>
+                        在更新的服务列表中选择需要的模块，然后点击Update
+                    </code></pre>
+                    <p>第四步</p>
+                    <pre><code>
+                        在Hierarchy下创建一个GameObject，展开GameBox/ServiceCenter模块，将ServicePlayer挂到该GameObject上
+                    </code></pre>
+                    <pre><code>
+                        在Project下展开需要的模块文件，将对应的Installer挂在之前的GameObject上
+                    </code></pre>
                 </section>
             </div>
             <div style="clear: both"></div>
